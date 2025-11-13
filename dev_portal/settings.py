@@ -108,7 +108,8 @@ def env_required(key: str) -> str:
     return val
 
 # Read required DB env vars (will raise a helpful error if any are missing)
-DB_HOST = env_required("DB_HOST")
+# DB_HOST = env_required("DB_HOST")
+DB_HOST = "localhost"
 DB_USER = env_required("DB_USER")
 DB_PASS = env_required("DB_PASS")
 DB_NAME = env_required("DB_NAME")
