@@ -1,2 +1,1 @@
-web: gunicorn 
-dev_portal.wsgi:application --workers 2
+web: gunicorn dev_portal.wsgi:application --workers 2
