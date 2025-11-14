@@ -21,7 +21,7 @@ def env_required(key: str, default: str | None = None) -> str:
 SECRET_KEY = env_required("SECRET_KEY", "unsafe-local-dev-key")  # keep local fallback for dev only
 DEBUG = os.getenv("DEBUG", "False").lower() in ("1", "true", "yes")  # set DEBUG=True locally if needed
 # ALLOWED_HOSTS: provide comma-separated list in env, fallback to localhost for dev
-ALLOWED_HOSTS = ["django-student-api-production.up.railway.app", ]
+ALLOWED_HOSTS = ["django-student-api-production.up.railway.app", "localhost", "127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
