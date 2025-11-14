@@ -6,7 +6,7 @@ class StudentSerializer(serializers.ModelSerializer):
         model = Student
         fields = ["id", "name", "age", "course"]
 
-def validate_age(self, value):
-    if value <= 0:
-        raise serializers.ValidationError("Age must be positive")
-    return value
+    def validate_age(self, value):
+        if value <= 0:
+            raise serializers.ValidationError("Age must be positive")
+        return value
